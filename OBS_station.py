@@ -15,8 +15,8 @@ LOCATION = "--"
 #station_data =  [station name, lat, lon, elevation]
 
 # Trạm để lấy data test
-station_data = ["FS10D", 40.4328, -124.6940, -1153.8]  #2014-07-17	2015-08-27
-
+#station_data = ["FS10D", 40.4328, -124.6940, -1153.8]  #2014-07-17	2015-08-27
+station_data = ["FS13D", 40.4937, -124.8034, -2291.2]
 # Trạm để lấy data train/val
 #station_data = ["M11B", 42.9320, -125.0171, -1109.0]   #2012-09-02	2013-06-18   58 sự kiện
 #station_data = ["M12B", 42.1840, -124.9461, -1045.0]   #2012-09-02	2013-06-18   115 sự kiện
