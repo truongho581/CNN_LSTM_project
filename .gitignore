@@ -47,7 +47,6 @@ models/
 # Data
 *.csv
 *.tsv
-*.zip
 *.tar.gz
 *.npy
 *.npz
@@ -57,10 +56,13 @@ data/
 dataset/
 *.jpg
 *.jpeg
-*.png
 *.bmp
 spectrograms/
 augmented_data/
+earthquake/
+noise/
+full_spectrogram/
+waveforms/
 
 # TensorBoard
 events.out.tfevents.*
