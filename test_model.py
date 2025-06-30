@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 # ================================================
 # ✅ 1) Load model CNN-LSTM đã huấn luyện
 # ================================================
-model = load_model('best_model_epoch09_valAcc0.9187.h5')
+model = load_model('result_2/best_model_epoch09_valAcc0.9187.h5')
 print("✅ Model loaded!")
 
 # ================================================
