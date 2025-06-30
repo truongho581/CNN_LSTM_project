@@ -30,7 +30,7 @@ build/
 .DS_Store
 
 # Model files and outputs
-*.h5
+
 *.hdf5
 *.ckpt
 *.pb
