@@ -184,3 +184,5 @@ Found 736 images belonging to 2 classes.
     accuracy                           0.95       736
    macro avg       0.95      0.95      0.95       736
 weighted avg       0.95      0.95      0.95       736
+
+🔬 ROC AUC: 0.9939

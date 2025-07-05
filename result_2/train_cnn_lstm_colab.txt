@@ -280,4 +280,50 @@ print(f"✅ Latest: {latest_file}")
 save_dir = '/content/drive/MyDrive/Colab_models/'
 os.makedirs(save_dir, exist_ok=True)
 shutil.copy(latest_file, save_dir)
-print(f"🚀 Saved {latest_file} to {save_dir}")
+print(f"🚀 Saved {latest_file} to {save_dir}
+
+######################################################################
+
+CNN Only
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import (
+    Input, Conv2D, MaxPooling2D, BatchNormalization,
+    Activation, Dense, Dropout, Flatten  # ✅ Thêm Flatten
+)
+
+inputs = Input(shape=(128, 128, 1))
+
+# Block 1
+x = Conv2D(32, (3, 3), padding='same')(inputs)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Dropout(0.25)(x)
+
+# Block 2
+x = Conv2D(64, (3, 3), padding='same')(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Dropout(0.25)(x)
+
+# Block 3
+x = Conv2D(128, (3, 3), padding='same')(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Dropout(0.25)(x)
+
+# ✅ Thay Reshape + BiLSTM bằng Flatten
+x = Flatten()(x)
+x = Dropout(0.5)(x)
+
+# Fully Connected output
+outputs = Dense(1, activation='sigmoid')(x)
+
+model = Model(inputs, outputs)
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.summary()
+
